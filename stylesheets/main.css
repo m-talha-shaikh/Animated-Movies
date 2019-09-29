@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+    text-decoration: none ;
+    list-style: none ;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Header*/
+h1 {
+    color: #fff ;
+    background-color: #111 ;
+    width: 100% ;
+    height: 80px ;
+    text-align: center ;
+    line-height: 70px ;
+    font-weight: bold;
+    font-size: 35px ;
+}
+
+h1:hover {
+    color: lightgray ;
+}
+
+
+/*Navigation*/
+nav {
+    width: 70% ;
+    margin: 10px 15% ;
+}
+
+nav ul li a {
+    display: inline-block ;
+    height: 70px ;
+    line-height:70px ;
+    text-align: center ;
+    width: 100% ;
+    border: 1px solid #fff ;
+    color: #fff ;
+    background-color: #111 ;
+}
+
+nav ul li:hover{
+    font-size: 2em ;
+}
+
+@media all and (min-width: 450px) and (max-width:999px) {
+    nav ul {
+        display: grid ;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media all and (min-width:1000px) {
+    nav ul {
+        display: grid ;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+main {
+    width: 95% ;
+    margin: 30px auto ;
+}
+
+.video {
+    grid-area:video ;
+}
+
+.title {
+    grid-area:title;
+}
+
+.description {
+    grid-area:description ;
+}
+
+iframe {
+    width: 100% ;
+    height: 250px ;
+}
+
+section > div {
+    margin: 10px auto ;
+    width: 95% ;
+    text-align: center ;
+}
+
+strong {
+    font-weight: bold ;
+}
+
+p {
+    font-size: 19px;
+    line-height: 25px ;
+}
+
+h2 {
+    font-size: 38px; 
+    font-weight: bolder ;
+    margin-bottom: 10px ;
+}
+
+section {
+    margin-bottom : 80px ;
+}
+
+@media all and (min-width:650px) and (max-width:849px) {
+    iframe {
+        height: 400px ;
+    }
+}
+
+@media all and (min-width:850px) {
+    main section {
+        display: grid ;
+        grid-template-columns: repeat(4 , 1fr) ;
+        grid-template-rows: 1fr 2fr 200px ;
+        grid-template-areas: "video video video ."
+                             "video video video title"
+                             "video video video description"
+                             "video video video description"
+    }
+
+    iframe {
+        height: 100% ;
+    }
+
+}
